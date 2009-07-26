@@ -1,0 +1,16 @@
+<h1>New <%= singular_name %></h1>
+
+<%% form_for(@<%= singular_name %>) do |f| %>
+  <%%= f.error_messages %>
+
+<% for attribute in attributes -%>
+  <div class="fmElem">
+    <%%= f.label :<%= attribute.name %> %>
+    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
+  </div>
+<% end -%>
+  <div class="controls">
+    <%%= f.submit 'Create' %>
+    <%%= link_to 'Cancel', <%= plural_name %>_path %>
+  </div>
+<%% end %>

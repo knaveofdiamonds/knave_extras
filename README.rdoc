@@ -1,6 +1,7 @@
 = knave-extras
 
-Description goes here.
+Various bits and pieces I find useful on a rails project. Unlikely to be
+of much use to anyone else without modification.
 
 == Copyright
 

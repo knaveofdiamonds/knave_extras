@@ -5,7 +5,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "knave-extras"
-    gem.summary = %Q{TODO}
+    gem.summary = "Various bits and pieces for a rails project"
     gem.email = "roland.swingler@gmail.com"
     gem.homepage = "http://github.com/knaveofdiamonds/knave-extras"
     gem.authors = ["Roland Swingler"]
