@@ -10,7 +10,7 @@ class <%= migration_name %> < ActiveRecord::Migration
     end
 
 <% attributes.select(&:reference?).each do |attribute| -%>
-    add_index :<%= table_name %>, :<%= attribute_name %>
+    add_index :<%= table_name %>, :<%= attribute.name + "_id" %>
 <% end -%>
   end
 
