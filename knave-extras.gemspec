@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "knave-extras.gemspec",
      "lib/knave_extras.rb",
      "rails_generators/model/USAGE",
      "rails_generators/model/model_generator.rb",
