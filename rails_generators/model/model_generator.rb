@@ -23,7 +23,7 @@ class ModelGenerator < Rails::Generator::NamedBase
   end
 
   def numeric_attributes
-    @numeric_attributes ||= attributes.select {|a| [:integer, :decimal, :float].include?(a.type) }
+    @numeric_attributes ||= attributes.select {|a| ! a.reference? && ['integer', 'decimal', 'float'].include?(a.type) }
   end
 
   protected
