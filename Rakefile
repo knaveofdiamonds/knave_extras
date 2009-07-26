@@ -4,7 +4,7 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "knave-extras"
+    gem.name = "knave_extras"
     gem.summary = "Various bits and pieces for a rails project"
     gem.email = "roland.swingler@gmail.com"
     gem.homepage = "http://github.com/knaveofdiamonds/knave-extras"
@@ -49,7 +49,7 @@ Rake::RDocTask.new do |rdoc|
   end
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "knave-extras #{version}"
+  rdoc.title = "knave_extras #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
