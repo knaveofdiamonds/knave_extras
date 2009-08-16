@@ -1,10 +1,8 @@
 require 'vlad'
 
 namespace :vlad do
-  # Undefine vlad:setup and vlad:update
-
   desc "Update code on the remote machine"
-  remote_task :update => [:push_code, :clone_code, :update_symlinks, :make_current]
+  remote_task :update => [:push_code, :clone_code, :update_symlinks, :install_gems, :make_current]
 
   task :push_code do
     `git push #{remote_name} HEAD`
@@ -19,6 +17,10 @@ namespace :vlad do
   remote_task :make_current do
     run "rm -f #{current_path} && ln -s #{latest_release} #{current_path}"
     run "echo #{now} $USER #{revision} #{File.basename release_path} >> #{deploy_to}/revisions.log"
+  end
+
+  remote_task :install_gems do
+    run "cd #{latest_release} && sudo rake gems:install RAILS_ENV=production"
   end
   
   desc "Setup servers"
