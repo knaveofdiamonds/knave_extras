@@ -5,7 +5,7 @@ Rake::TaskManager.class_eval do
     names.each {|name| @tasks.delete(name.to_s) }
   end
 end
-Rake.application.remove_tasks("vlad:update", "vlad:setup")
+Rake.application.remove_tasks("vlad:update", "vlad:setup", "vlad:setup_app")
 
 namespace :vlad do
   desc "Update code, run migrations and restart server"
