@@ -1,7 +1,7 @@
 require 'vlad'
 
 Rake::TaskManager.class_eval do
-  def remove_task(*names)
+  def remove_tasks(*names)
     names.each {|name| @tasks.delete(name.to_s) }
   end
 end
