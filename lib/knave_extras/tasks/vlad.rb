@@ -8,8 +8,11 @@ end
 Rake.application.remove_tasks("vlad:update", "vlad:setup")
 
 namespace :vlad do
+  desc "Update code, run migrations and restart server"
+  task :deploy => [:update, :migrate, :start_app]
+
   desc "Update code on the remote machine"
-  remote_task :update => [:push_code, :clone_code, :update_symlinks, :install_gems, :make_current]
+  task :update => [:push_code, :clone_code, :update_symlinks, :install_gems, :make_current]
 
   task :push_code do
     `git push #{remote_name} HEAD`
