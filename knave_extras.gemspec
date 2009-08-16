@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Roland Swingler"]
-  s.date = %q{2009-07-26}
+  s.date = %q{2009-08-16}
   s.email = %q{roland.swingler@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "knave_extras.gemspec",
      "lib/knave_extras.rb",
+     "lib/knave_extras/tasks/vlad.rb",
      "rails_generators/model/USAGE",
      "rails_generators/model/model_generator.rb",
      "rails_generators/model/templates/migration.rb",

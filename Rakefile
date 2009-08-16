@@ -9,6 +9,7 @@ begin
     gem.email = "roland.swingler@gmail.com"
     gem.homepage = "http://github.com/knaveofdiamonds/knave-extras"
     gem.authors = ["Roland Swingler"]
+    gem.files << "lib/knave_extras/tasks/vlad.rb"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 
