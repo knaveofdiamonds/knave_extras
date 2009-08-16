@@ -1,5 +1,12 @@
 require 'vlad'
 
+Rake::TaskManager.class_eval do
+  def remove_task(*names)
+    names.each {|name| @tasks.delete(name.to_s) }
+  end
+end
+Rake.application.remove_tasks("vlad:update", "vlad:setup")
+
 namespace :vlad do
   desc "Update code on the remote machine"
   remote_task :update => [:push_code, :clone_code, :update_symlinks, :install_gems, :make_current]
