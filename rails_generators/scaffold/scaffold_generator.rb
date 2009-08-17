@@ -44,11 +44,9 @@ class ScaffoldGenerator < Rails::Generator::NamedBase
       m.directory(File.join('app/controllers', controller_class_path))
       m.directory(File.join('app/helpers', controller_class_path))
       m.directory(File.join('app/views', controller_class_path, controller_file_name))
-      m.directory(File.join('app/views/layouts', controller_class_path))
       m.directory(File.join('test/functional', controller_class_path))
       m.directory(File.join('test/unit', class_path))
       m.directory(File.join('test/unit/helpers', class_path))
-      m.directory(File.join('public/stylesheets', class_path))
 
       for action in scaffold_views
         m.template(
@@ -58,9 +56,6 @@ class ScaffoldGenerator < Rails::Generator::NamedBase
       end
 
       # Layout and stylesheet.
-      m.template('layout.html.erb', File.join('app/views/layouts', controller_class_path, "#{controller_file_name}.html.erb"))
-      m.template('style.css', 'public/stylesheets/scaffold.css')
-
       m.template(
         'controller.rb', File.join('app/controllers', controller_class_path, "#{controller_file_name}_controller.rb")
       )
