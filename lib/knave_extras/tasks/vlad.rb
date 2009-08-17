@@ -20,7 +20,10 @@ namespace :vlad do
 
   remote_task :clone_code do
     run ["git clone -s #{scm_path} #{latest_release}",
-         "chmod -R g+w #{latest_release}",
+         "cd #{latest_release}",
+         "git submodule init",
+         "git submodule update",
+         "chmod -R g+w .",
          "mkdir #{latest_release}/db #{latest_release}/tmp" ].join(" && ")
   end
 
