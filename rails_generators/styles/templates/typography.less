@@ -1,0 +1,64 @@
+/**
+ * 1em == 10px. Each size is independent, so 2.3em here means 23px - actual em sizes are
+ * calculated by lessCss.
+ */
+@baseline:   1.8em;
+@bodysize:   1.2em;
+@h1size:     2.4em;
+@h2size:     1.8em;
+@h3size:     1.4em;
+@smallprint: 1.0em;
+
+/** Calculations **/
+
+html {
+  font-size: 62.5%;
+  line-height: @baseline 
+}
+
+body { 
+  font-size: @bodysize; 
+  margin-top: @baseline / @bodysize;
+}
+
+p, ul, ol, dl, table, pre, blockquote, h4, h5, h6 { 
+  margin-bottom: @baseline / @bodysize;
+}
+
+h1, h2, h3, .smallprint { 
+  position: relative;
+}
+
+h1 {
+  top: (@baseline / 2 + @bodysize / 3 - @h1size / 3) / @h1size;
+  font-size: @h1size / @bodysize; 
+  line-height: @baseline * 2 / @h1size; 
+  margin-bottom: @baseline / @h1size;
+}
+
+h2 { 
+  top: ((@baseline / 2) + (@bodysize / 3) - (@h2size / 3)) / @h2size;
+  font-size: @h2size / @bodysize; 
+  line-height: @baseline * 2 / @h2size; 
+  margin-bottom: @baseline / @h2size;
+}
+
+h3 { 
+  font-size: @h3size / @bodysize; 
+  line-height: @baseline / @h3size; 
+  margin-bottom: @baseline / @h3size;
+}
+
+h4,h5,h6 { 
+  font-size: 100%;
+}
+
+.smallprint { 
+  font-size: @smallprint / @bodysize;
+  line-height: @baseline / @smallprint;
+  margin-bottom: @baseline / @smallprint;
+}
+
+table.padded td, table.padded th { 
+  padding: @baseline / (@bodysize * 2)
+}

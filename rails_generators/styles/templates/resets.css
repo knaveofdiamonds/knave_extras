@@ -1,0 +1,31 @@
+/*~~~~~~~~~~~~~~~~ Resets ~~~~~~~~~~~~~~~~*/
+
+body, html, ol, ul, li, dl, dt, dd, p, pre, h1, h2, h3, h4, h5, h6, blockquote, table, caption, th, td, form, label, fieldset, legend, input, textarea, embed, object, img {
+  margin: 0;
+  padding: 0;
+}
+
+html { font-size: 62.5%; line-height: 1; }
+h1, h2, h3, h4, h5, h6 { font-size: inherit; }
+input, textarea, address, pre { font: inherit; }
+td, th, caption { text-align: left; vertical-align: top; }
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q {  quotes: "" ""; }
+ol, ul { list-style: none; }
+textarea { vertical-align: bottom; }
+
+legend, fieldset, a img, img { border: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+:focus { outline: 0; }
+
+hr {
+  background: #444;
+  border: none;
+  height: 1px;
+  width: 100%;
+  display: block;
+  margin: 0px;
+  margin-top: -1px;
+}
+
+/*~~~~~~~~~~~~~~~~ End Resets ~~~~~~~~~~~~~~~~*/
