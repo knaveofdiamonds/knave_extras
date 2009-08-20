@@ -1,4 +1,4 @@
-class <%= controller_class_name %>sController < ApplicationController
+class <%= controller_class_name %>Controller < ApplicationController
 
   def show
     @<%= singular_name %> = <%= class_name %>.find(params[:id])

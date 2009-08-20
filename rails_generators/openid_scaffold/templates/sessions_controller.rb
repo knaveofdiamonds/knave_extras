@@ -28,8 +28,10 @@ class SessionsController < ApplicationController
           flash[:notice] = "Welcome back."
         else
           @<%= singular_name %> = <%= class_name %>.create(:openid_identifier => identity_url)
-          @<%= singular_name %>.update_attributes(:name => registration['fullname'], 
-                                  :email => registration['email'])
+          @<%= singular_name %>.name = registration['fullname'] if registration['fullname'].present?
+          @<%= singular_name %>.email = registration['email'] if registration['email'].present?
+          @<%= singular_name %>.save
+
           flash[:notice] = "Account created"
         end
 
