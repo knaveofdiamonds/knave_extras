@@ -49,13 +49,13 @@ class OpenidScaffoldGenerator < Rails::Generator::NamedBase
       m.directory(File.join('test/unit', class_path))
       m.directory(File.join('test/unit/helpers', class_path))
 
-      m.template("session_new.html.erb", 'app/views/sessions/new.html.erb')
+      m.template("sessions_new.erb", 'app/views/sessions/new.html.erb')
       m.template("sessions_controller.rb", 'app/controllers/sessions_controller.rb')
       m.template("application_controller.rb", 'app/controllers/application_controller.rb')
-      m.template("user_edit.html.erb", File.join('app/views', controller_class_path, controller_file_name, "edit.html.erb"))
-      m.template("user_show.html.erb", File.join('app/views', controller_class_path, controller_file_name, "show.html.erb"))
+      m.template("user_edit.erb", File.join('app/views', controller_class_path, controller_file_name, "edit.html.erb"))
+      m.template("user_show.erb", File.join('app/views', controller_class_path, controller_file_name, "show.html.erb"))
       m.template(
-        'user_controller.rb', File.join('app/controllers', controller_class_path, "#{controller_file_name}_controller.rb")
+        'users_controller.rb', File.join('app/controllers', controller_class_path, "#{controller_file_name}_controller.rb")
       )
 
       m.template('functional_test.rb', File.join('test/functional', controller_class_path, "#{controller_file_name}_controller_test.rb"))
