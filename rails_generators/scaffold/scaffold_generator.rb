@@ -54,6 +54,7 @@ class ScaffoldGenerator < Rails::Generator::NamedBase
           File.join('app/views', controller_class_path, controller_file_name, "#{action}.html.erb")
         )
       end
+      m.template("view_form.html.erb", File.join('app/views', controller_class_path, controller_file_name, "_form.html.erb"))
 
       # Layout and stylesheet.
       m.template(

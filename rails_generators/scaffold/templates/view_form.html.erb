@@ -1,0 +1,9 @@
+<%% semantic_form_for(@<%= singular_name %>) do |f| %>
+<% for attribute in attributes -%>
+  <%%= f.input :<%= attribute.name %> %>
+<% end -%>
+  <%% f.buttons do %>
+    <%%= f.submit 'Create' %>
+    <%%= link_to 'Cancel', <%= plural_name %>_path %>
+  <%% end %>
+<%% end %>
