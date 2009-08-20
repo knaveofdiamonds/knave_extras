@@ -1,4 +1,4 @@
-class ScaffoldGenerator < Rails::Generator::NamedBase
+class OpenidScaffoldGenerator < Rails::Generator::NamedBase
   default_options :force_plural => false
 
   attr_reader   :controller_name,

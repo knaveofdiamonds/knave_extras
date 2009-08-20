@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Roland Swingler"]
-  s.date = %q{2009-08-17}
+  s.date = %q{2009-08-20}
   s.email = %q{roland.swingler@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -27,6 +27,19 @@ Gem::Specification.new do |s|
      "rails_generators/model/templates/migration.rb",
      "rails_generators/model/templates/model.rb",
      "rails_generators/model/templates/unit_test.rb",
+     "rails_generators/openid_scaffold/openid_scaffold_generator.rb",
+     "rails_generators/openid_scaffold/templates/application_controller.rb",
+     "rails_generators/openid_scaffold/templates/functional_test.rb",
+     "rails_generators/openid_scaffold/templates/helper.rb",
+     "rails_generators/openid_scaffold/templates/helper_test.rb",
+     "rails_generators/openid_scaffold/templates/migration.rb",
+     "rails_generators/openid_scaffold/templates/sessions_controller.rb",
+     "rails_generators/openid_scaffold/templates/sessions_new.erb",
+     "rails_generators/openid_scaffold/templates/user.rb",
+     "rails_generators/openid_scaffold/templates/user_edit.erb",
+     "rails_generators/openid_scaffold/templates/user_show.erb",
+     "rails_generators/openid_scaffold/templates/user_test.rb",
+     "rails_generators/openid_scaffold/templates/users_controller.rb",
      "rails_generators/scaffold/USAGE",
      "rails_generators/scaffold/scaffold_generator.rb",
      "rails_generators/scaffold/templates/controller.rb",
@@ -36,6 +49,7 @@ Gem::Specification.new do |s|
      "rails_generators/scaffold/templates/layout.html.erb",
      "rails_generators/scaffold/templates/style.css",
      "rails_generators/scaffold/templates/view_edit.html.erb",
+     "rails_generators/scaffold/templates/view_form.html.erb",
      "rails_generators/scaffold/templates/view_index.html.erb",
      "rails_generators/scaffold/templates/view_new.html.erb",
      "rails_generators/scaffold/templates/view_show.html.erb",
