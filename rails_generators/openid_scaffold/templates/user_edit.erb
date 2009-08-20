@@ -1,0 +1,14 @@
+<h1>Edit your details</h1>
+
+<%% semantic_form_for(@<%= singular_name %>) do |f| %>
+  <p><%%=h @<%= singular_name %>.openid_identifier %></p>
+
+  <ol class="fields">
+    <%%= f.input :name %>
+    <%%= f.input :email %>
+  </ol>
+
+  <%% f.buttons  do %>
+    <%%= f.submit "Save details" %>
+  <%% end %>
+<%% end %>

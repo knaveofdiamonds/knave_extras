@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%%=h @<%= singular_name %>.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%%=h @<%= singular_name %>.email %>
+</p>
+
+<p>
+  <b>Openid identifier:</b>
+  <%%=h @<%= singular_name %>.openid_identifier %>
+</p>
+
+
+<%%= link_to 'Edit', edit_user_path(@<%= singular_name %>) %> |
+<%%= link_to 'Back', users_path %>

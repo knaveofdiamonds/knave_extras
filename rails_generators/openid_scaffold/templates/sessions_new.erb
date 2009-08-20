@@ -1,0 +1,20 @@
+<h1>Sign in</h1>
+
+<style type="text/css">
+  input.openid {
+    background: url(http://openid.net/images/login-bg.gif) 0 50% no-repeat;
+    padding-left: 18px;
+  }
+</style>
+
+<%%= form_tag "/sessions" %>
+  <ol class="fields">
+    <li>
+      <label>Open ID URL</label>
+      <input type="text" class="openid" name="openid_identifier" />
+    </li>
+    <div class="buttons">
+      <input type="submit" />
+    </div>
+  </ol>
+</form>
