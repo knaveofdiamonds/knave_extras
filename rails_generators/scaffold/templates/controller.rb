@@ -1,6 +1,6 @@
 class <%= controller_class_name %>Controller < ApplicationController
   def index
-    @<%= table_name %> = <%= class_name %>.all
+    @<%= table_name %> = <%= class_name %>.paginate(:page => params[:page], :per_page => 50)
 
     respond_to do |format|
       format.html # index.html.erb
