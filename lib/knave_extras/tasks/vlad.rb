@@ -24,7 +24,7 @@ namespace :vlad do
          "git submodule init",
          "git submodule update",
          "chmod -R g+w .",
-         "mkdir #{latest_release}/db #{latest_release}/tmp" ].join(" && ")
+         "mkdir -p #{latest_release}/db #{latest_release}/tmp" ].join(" && ")
   end
 
   remote_task :make_current do
